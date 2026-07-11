@@ -12,12 +12,12 @@ Also I have demonstrate both manual PI Tuning and MATLAB automatic tuning using 
 
 ## Project Features:
 - MATLAB Simulink implementation: A MATLAB Simulation is created using the blocks-
- Repeating sequence: It generates the reflow oven temperature profile i.e. reference input.
- Sum: It is the reference feedback and calculates the error between desired and actual temperature.
- PID Controller(Configured as PI): It controls the heater based on the temperature error.
- Disturbance (sum+step): Adds the disturbance i.e. heat loss to the control output at specific time here at 100th sec.
- Transfer function: It models the thermal dynamics of the reflow oven.
- Scope:Displays the behaviour of temperature response vs time. 
+ - Repeating sequence: It generates the reflow oven temperature profile i.e. reference input.
+ - Sum: It is the reference feedback and calculates the error between desired and actual temperature.
+ - PID Controller(Configured as PI): It controls the heater based on the temperature error.
+ - Disturbance (sum+step): Adds the disturbance i.e. heat loss to the control output at specific time here at 100th sec.
+ - Transfer function: It models the thermal dynamics of the reflow oven.
+ - Scope:Displays the behaviour of temperature response vs time. 
 - Automatic PI tuning: First the model is analysed using the manual PID tuning and then MATLAB auto tuning is done using 'pidtune()' function. In this   model PID controller is configured to PI with values of P= 1.0424 and I=0.3128.
 - Temperature profile tracking:Temperature profile tracking is the process of ensuring that the oven temperature accurately follows the predefined reflow temperature profile using a closed-loop controller.
 - Disturbance analysis: To create a real time situation for the reflow oven disturbances are allowed to enter the oven and this is demonstrated by using a step and sum block which results to a heatloss at an instant of time here at 100th sec. 
@@ -30,7 +30,9 @@ Also I have demonstrate both manual PI Tuning and MATLAB automatic tuning using 
 
 ## Transfer Function:
 The thermal plant is modeled as first order system,
-G(s)=1\(10s+1)
+\[
+G(s)=\frac{1}{10s+1}
+\]
 
 ## Controller:
 Final PI controller parameters are as follows,
@@ -66,19 +68,19 @@ The complete closed-loop PI control model of the multi-zone reflow oven.
 
 Temperature response obtained using manually tuned PI controller parameters.
 
-![Manual PI Response](Images/scope_response.png)
+![Manual PI Response](Images/scope response.png)
 
 ### 3. Automatic PI Tuning
 
 MATLAB `pidtune()` was used to automatically determine the optimal PI controller gains.
 
-![Auto PI Tuning](Images/auto_tuning_of_pid.png)
+![Auto PI Tuning](Images/auto tuning of pid.png)
 
 ### 4. Dashboard Monitoring
 
 The dashboard provides real-time monitoring of the oven temperature using a Circular Gauge, Digital Display, and Status Lamp.
 
-![Dashboard](Images/after_simulation.png)
+![Dashboard](Images/after simulation.png)
 
 ### 5. Temperature Threshold Indication
 

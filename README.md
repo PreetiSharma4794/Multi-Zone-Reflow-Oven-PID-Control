@@ -68,19 +68,19 @@ The complete closed-loop PI control model of the multi-zone reflow oven.
 
 Temperature response obtained using manually tuned PI controller parameters.
 
-![Manual PI Response](Images/scope response.png)
+![Manual PI Response](Images/scope_response.png)
 
 ### 3. Automatic PI Tuning
 
 MATLAB `pidtune()` was used to automatically determine the optimal PI controller gains.
 
-![Auto PI Tuning](Images/auto tuning of pid.png)
+![Auto PI Tuning](Images/auto_tuning_of_pid.png)
 
 ### 4. Dashboard Monitoring
 
 The dashboard provides real-time monitoring of the oven temperature using a Circular Gauge, Digital Display, and Status Lamp.
 
-![Dashboard](Images/after simulation.png)
+![Dashboard](Images/after_simulation.png)
 
 ### 5. Temperature Threshold Indication
 
@@ -97,6 +97,7 @@ The Status Lamp turns ON when the oven temperature exceeds the predefined thresh
 
 ## Author
 *Preeti Sharma*
+
 Dr. B.R. Ambedkar National Institute of Technology Jalandhar
 
 ## License
